@@ -19,6 +19,7 @@ h4 {
 
 h1{
     font-size: 6rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color:#56a5eb;
     margin-bottom: 5rem;
 }
@@ -36,7 +37,7 @@ h1{
 /*UTILITIES*/
 .container {
     width: 100vw;
-    height: 100vh;
+    height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -95,12 +96,34 @@ h1{
     transform: none;
 }
 
+.btn1 {
+    font-size: 2rem;
+    padding: 2rem  7rem;
+    width: 20rem ;
+    text-align: left;
+    border: 0.1rem solid #56a5eb;
+    /* margin-bottom: 2rem; */
+    margin-left: 2rem;
+    text-decoration: none;
+    color: #56a5eb;
+    background-color: white;
+    /* position: absolute; */
+        top: 50%;
+        left: 10%;
+}
 /* FORMS */
 form {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+form p {
+    font-size: 1.8rem;
+    padding: 1rem  0;
+    width: 20rem ;
+    text-align: center;
 }
 
 input {
@@ -116,4 +139,70 @@ input::placeholder {
     color: #aaa;
 
 }
-
+.topic-container{
+    width: 90vw;
+    height: 90vh;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    max-width: 100rem;
+    margin: 0 auto; 
+}
+.topics {
+    display: flex;
+    position: absolute;
+        top: 50%;
+        left: 20%;
+    /* margin: 0 auto; */
+    /* margin-bottom: 0.5rem;
+    width: 100%;
+    font-size: 1.8rem; */
+    /* border: 0.1rem solid rgb(86, 165, 235, 0.25); */
+    /* background-color: white; */
+}
+#Message{
+    text-align: center;
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 4rem;
+    color:#56a5eb;
+    margin-bottom: 2rem;
+    position: absolute;
+        top: 20%;
+        left: 20%;
+        
+}
+.copyright{
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+    color:#133b5e;
+    position: absolute;
+    margin-top:2rem ;
+    left:40%;
+    /* align-content: flex-end; */
+}
+/* table */
+th, td {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 40px;
+    color: #56a5eb;
+    background-color: white;
+    font-size: 1.5rem;
+      
+  }
+  table,tr {
+    border-spacing: 30px;
+  }
+   th, td {
+    /* border: 1px solid black; */
+    border: 0.1rem solid #56a5eb;
+    /* border-collapse: collapse; */
+    border-radius: 5px;
+    border-style:double;
+    text-align:center;
+    /* border-color: #96D4D4; */
+  }
+  

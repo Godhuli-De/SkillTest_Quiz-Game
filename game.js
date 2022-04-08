@@ -6,6 +6,13 @@ console.log(choices);
 const progressText = document.getElementById("progressText");
 const scoreText=document.getElementById("score");
 const progressBarFull = document.getElementById("progressBarFull");
+const headertext=document.getElementById("javascript");
+headertext.innerText="Javascript"
+
+var topicselected=localStorage.getItem('mostRecentTopic');
+console.log("in controls lets validate"+topicselected);
+var heading=document.getElementById("scriptType");
+heading.innerHTML=topicselected+" Quiz";
 
 let currentQuestion={};
 let acceptingAnswers= true;
@@ -40,6 +47,63 @@ let questions = [
         answer: 4,
     },
 ];
+//react questions :
+let questions_react = [
+    {
+        question: 'Which of the following is not a disadvantage of React.js?',
+        choice1: 'React.js has only a view layer. We have put your code for Ajax requests, events and so on.',
+        choice2: 'The library of React.js is pretty large.',
+        choice3: 'The JSX in React.js makes code easy to read and write.',
+        choice4: 'The learning curve can be steep in React.js',
+        answer: 3,
+    },
+    {
+        question:"Which of the following command is used to install create-react-app?",
+        choice1: "npm install -g create-react-app",
+        choice2: "npm install create-react-app",
+        choice3: "npm install -f create-react-app",
+        choice4: "install -g create-react-app",
+        answer: 1,
+    },
+    {
+        question: "How many numbers of elements a valid react component can return?",
+        choice1: "1",
+        choice2: "2",
+        choice3: "4",
+        choice4: "5",
+        answer: 1,
+    },
+];
+
+//java qstn
+let questions_java = [
+    {
+        question: 'Arrays in java are-',
+        choice1: 'Object references',
+        choice2: 'Objects',
+        choice3: 'Primitive data type',
+        choice4: 'None',
+        answer: 2,
+    },
+    {
+        question:"What is the size of float and double in java?",
+        choice1: "32 and 64",
+        choice2: "32 and 32",
+        choice3: "64 and 72",
+        choice4: "64 and 64",
+        answer: 1,
+    },
+    {
+        question: "When an array is passed to a method, what does the method receive?",
+        choice1: "The reference of array",
+        choice2: "Copy of array",
+        choice3: "Length of array",
+        choice4: "Duplicate array",
+        answer: 1,
+    },
+];
+
+
 
 //CONSTANTS
 const CORRECT_BONUS = 10;
@@ -48,7 +112,19 @@ const MAX_QUESTIONS = 3;
 startGame = () => {
     questionCounter = 0;
     score = 0;
-    availableQuesions = [...questions];
+    if(topicselected=="JavaScript"){
+        console.log("in js IF ----");
+        availableQuesions = [...questions];
+    }
+    else if(topicselected=="React"){
+        console.log("in REACT IF ----");
+        availableQuesions = [...questions_react];
+    }
+    else{
+        console.log("in JAVA IF ----");
+        availableQuesions = [...questions_java];
+    }
+        
     console.log(availableQuesions);
     getNewQuestion();
 };

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quick Quiz- Topics</title>
+    <link rel="stylesheet" href="app.css" />
+    <link rel="stylesheet" href="game.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div  class="justify-center flex-column">
+        
+        <div class="topic-container">
+          <div>
+          <p id="Message">Please select the topic of your interest.</p>
+        </div>
+          <div class="topics" id="topics">
+            <div>
+              <a id="topics1" class="btn1" href="/react.html" onclick="localStorage.setItem('mostRecentTopic', this.innerText);console.log('Localstorage' + localStorage.getItem('mostRecentTopic'));">JavaScript</a>
+            </div>
+            <div>
+              <a id="topics1" class="btn1" href="/react.html" onclick="localStorage.setItem('mostRecentTopic', this.innerText);console.log('Localstorage' + localStorage.getItem('mostRecentTopic'));">React</a>
+            </div>
+            <div>
+              <a id="topics1" class="btn1" href="/react.html" onclick="localStorage.setItem('mostRecentTopic', this.innerText);">Java</a>
+            </div>
+          </div>
+          
+        </div>
+        <a class="btn" href="/" style="position:absolute;top:80%;left:42%;">Go Home</a>
+      </div>
+    </div>
+    <p class="copyright"> © Copyright Reserved by Godhuli De, 2022.</p>
+    <script src="topics.js"></script>
+  </body>
+</html>
